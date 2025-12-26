@@ -239,7 +239,7 @@
                         if (value < 87) return 1;
                         if (value >= 87 && value < 90) return 2;
                         if (value >= 90 && value < 92) return 3;
-                        if (value >= 92 && value < 95.5) return 4;
+                        if (value >= 92 && value <= 95.5) return 4;
                         if (value >= 95.5) return 5;
                         break;
                         
@@ -269,18 +269,18 @@
                         
                     case 'ipmh_moscow':
                         if (value <= 9) return 1;
-                        if (value > 9 && value <= 9.5) return 2;
-                        if (value > 9.5 && value <= 9.8) return 3;
-                        if (value > 9.8 && value <= 10.3) return 4;
-                        if (value > 10.3) return 5;
+                        if (value <= 9 && value > 9.5) return 2;
+                        if (value <= 9.5 && value > 9.8) return 3;
+                        if (value <= 9.8 && value > 10.3) return 4;
+                        if (value >= 10.3) return 5;
                         break;
                         
                     case 'ipmh_regional':
                         if (value <= 7.5) return 1;
-                        if (value > 7.5 && value <= 8) return 2;
-                        if (value > 8 && value <= 8.3) return 3;
-                        if (value > 8.3 && value <= 8.8) return 4;
-                        if (value > 8.8) return 5;
+                        if (value <= 7.5 && value > 8) return 2;
+                        if (value <= 8 && value > 8.3) return 3;
+                        if (value <= 8.3 && value > 8.8) return 4;
+                        if (value >= 8.8) return 5;
                         break;
                 }
                 return 0;
